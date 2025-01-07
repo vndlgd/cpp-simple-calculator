@@ -18,7 +18,7 @@ int getUserInteger()
 /* This function lacks input validation
  * if you type in lots of random characters
  * you will get the invalid operation message displayed many times */
-char getUserChoice()
+char getMathematicalOperation()
 {
 	char choice{};
 	std::cout << "Enter operation +, -, *, / (enter 'q' to quit): ";
@@ -34,7 +34,7 @@ char getUserChoice()
 void startCalculator()
 {
 	std::cout << "Simple Calculator!\n";
-	char choice{getUserChoice()};
+	char choice{getMathematicalOperation()};
 
 	while (choice != 'q')
 	{
@@ -57,7 +57,7 @@ void startCalculator()
 			break;
 		}
 
-		choice = getUserChoice();
+		choice = getMathematicalOperation();
 	}
 
 	if (choice == 'q')
